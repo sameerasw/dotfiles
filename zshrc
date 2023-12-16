@@ -128,3 +128,4 @@ source /home/sameerasw/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias reload="omz reload"
 alias cls="clear"
 alias zs="code ~/.zshrc"
+alias neofetch="neofetch --source ~/git/dotfiles/8\).txt"
