@@ -1,4 +1,4 @@
-# zsh
+# My config files
 My zsh configs in terminal
 
 ```
