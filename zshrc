@@ -119,11 +119,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /home/sameerasw/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias reload="omz reload"
 alias cls="clear"
