@@ -16,3 +16,18 @@ cd ~/git/dotfiles
 git add zshrc
 git commit -m"Initial commit"
 ```
+
+```
+#link .zshrc
+ln -s /git/dotfiles/zshrc ~/.zshrc
+```
+
+```
+#setup keyd
+cd /git/keyd
+make && sudo make install
+sudo systemctl enable keyd && sudo systemctl start keyd
+sudo mkdir /etc/keyd/
+sudo ln -s ~/git/dotfiles/keyd/*.conf /etc/keyd/
+sudo keyd reload
+```
