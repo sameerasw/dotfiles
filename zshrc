@@ -123,7 +123,7 @@ source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias reload="omz reload"
 alias cls="clear"
@@ -133,3 +133,15 @@ alias idea="~/idea-IU-233.11799.300/bin/idea.sh"
 alias android-studio="~/android-studio/bin/studio.sh"
 alias mp4="ffmpeg -i *.webm *.mp4"
 alias browser="rm ~/.config/microsoft-edge-dev/Singleton*"
+alias android="scrcpy -m 900 -b 2M"
+alias adb="adb shell"
+alias gadd="git add ."
+alias gcom="git commit -m"
+alias gpush="git push"
+alias gpull="git pull"
+alias glog="git log"
+alias gstatus="git status"
+alias gdiff="git diff"
+alias gclone="git clone"
+alias gfetch="git fetch"
+alias devices="adb devices"
