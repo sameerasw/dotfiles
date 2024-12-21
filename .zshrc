@@ -69,6 +69,10 @@ ZSH_THEME="agnoster"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# defaults
+MAGIC_ENTER_GIT_COMMAND='git status -u .'
+MAGIC_ENTER_OTHER_COMMAND='ls -lh .'
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -86,10 +90,10 @@ copypath
 copybuffer
 dirhistory
 history
-adb
 command-not-found
 dnf
 qrcode
+magic-enter
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,11 +133,9 @@ alias reload="omz reload"
 alias cls="clear"
 alias zs="code ~/.zshrc"
 alias neofetch="neofetch --source ~/git/dotfiles/8\).txt"
-alias idea="~/idea-IU-233.11799.300/bin/idea.sh"
-alias android-studio="~/android-studio/bin/studio.sh"
-alias mp4="ffmpeg -i *.webm *.mp4"
-alias browser="rm ~/.config/microsoft-edge-dev/Singleton*"
-alias android="scrcpy -m 900 -b 2M"
+alias android="scrcpy -m 800 -b 2M"
+alias androidw="scrcpy -m 800 -b 2M -e -S --video-codec=h265 --window-title='Sameera Pixel'"
+alias androidd="scrcpy -m 750 -w -b 1M --video-codec=h265 --window-title='Sameera Pixel' --new-display=800x1400"
 alias gadd="git add ."
 alias gcom="git commit -m"
 alias gpush="git push"
@@ -143,4 +145,26 @@ alias gstatus="git status"
 alias gdiff="git diff"
 alias gclone="git clone"
 alias gfetch="git fetch"
+alias gremote="git remote set-url origin "
+alias macapp="xattr -d com.apple.quarantine "
 alias btkill="sudo pkill bluetoothd"
+alias arcb="watch -n0.1 killall Dock"
+alias noticlear="killall NotificationCenter"
+alias nvimpath="cd /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime"
+
+
+
+PATH=~/.console-ninja/.bin:$PATH
+
+export CMAKE_PREFIX_PATH="/Users/sameerasandakelum/GIT/synergy-core/deps/qt/6.7.2/macos:$CMAKE_PREFIX_PATH"
+
+export PATH="/Users/sameerasandakelum/GIT/synergy-core/deps/qt/6.7.2/macos/bin:$PATH"
+
+# Created by `pipx` on 2024-08-17 12:32:10
+export PATH="$PATH:/Users/sameerasandakelum/.local/bin"
+export PATH="$PATH:/Library/PostgreSQL/15/bin"
+export PATH="$PATH:/opt/scrcpy"
+
+source /Users/sameerasandakelum/.zlugin/zlugin.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
