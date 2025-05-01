@@ -1,4 +1,12 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+source ~/.zplug/init.zsh
+
+
+
+
+
+
+
+#Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -133,7 +141,7 @@ alias reload="omz reload"
 alias cls="clear"
 alias zs="code ~/.zshrc"
 alias neofetch="neofetch --source ~/git/dotfiles/8\).txt"
-alias android="scrcpy -m 800 -b 2M"
+alias android="scrcpy -m 800 -b 2M -w"
 alias androidw="scrcpy -m 800 -b 2M -e -S --video-codec=h265 --window-title='Sameera Pixel'"
 alias androidd="scrcpy -m 750 -w -b 1M --video-codec=h265 --window-title='Sameera Pixel' --new-display=800x1400"
 alias gadd="git add ."
