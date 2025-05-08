@@ -1,6 +1,40 @@
 source ~/.zplug/init.zsh
 
 
+# Get the current hour in 24-hour format
+hour=$(date +"%H")
+
+# Define time ranges
+morning_start=5    # 5 AM
+morning_end=11     # 11 AM
+afternoon_start=12 # 12 PM
+afternoon_end=17   # 5 PM
+
+# Check the time of day and set a greeting
+if [ "$hour" -ge "$morning_start" ] && [ "$hour" -le "$morning_end" ]; then
+    greeting="Good morning"
+elif [ "$hour" -ge "$afternoon_start" ] && [ "$hour" -le "$afternoon_end" ]; then
+    greeting="Good afternoon"
+else
+    greeting="Good evening"
+fi
+
+# Full ASCII art and greeting line
+art_and_greeting="✦ $greeting, Sameera! ✦"
+
+# Get terminal width
+term_width=$(tput cols)
+
+# Strip ANSI codes if any and get string length
+text_length=${#art_and_greeting}
+
+# Calculate padding
+padding=$(( (term_width - text_length) / 2 ))
+
+# Print centered art + greeting
+printf "%*s%s\n" "$padding" "" "$art_and_greeting"
+
+fastfetch --config minimal
 
 
 
@@ -159,7 +193,7 @@ alias btkill="sudo pkill bluetoothd"
 alias arcb="watch -n0.1 killall Dock"
 alias noticlear="killall NotificationCenter"
 alias nvimpath="cd /opt/homebrew/Cellar/neovim/0.10.2_1/share/nvim/runtime"
-
+alias macapp="xattr -d com.apple.quarantine /Applications/"
 
 
 PATH=~/.console-ninja/.bin:$PATH
@@ -176,3 +210,14 @@ export PATH="$PATH:/opt/scrcpy"
 source /Users/sameerasandakelum/.zlugin/zlugin.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+
+
+
+
+
+
+
+
+
